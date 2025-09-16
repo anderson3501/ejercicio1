@@ -1,6 +1,7 @@
 # ejercicio1
 ##  1.
- <img width="897" height="726" alt="image" src="https://github.com/user-attachments/assets/e244452e-30df-467b-b8e8-192577ecac51" /> 
+ <img width="897" height="726" alt="image" src="https://github.com/user-attachments/assets/e244452e-30df-467b-b8e8-192577ecac51" />
+ 
 ### imagen json get 
 
 <img width="1218" height="726" alt="image" src="https://github.com/user-attachments/assets/dc913006-995d-4a36-9fe1-1d6213401c0b" /> 
