@@ -1,0 +1,34 @@
+services:
+  backend:
+    build: ./backend
+    container_name: express_backend
+    networks:
+      - app_network
+    env_file:
+      - .env
+    depends_on:
+      - neo4j
+
+  neo4j:
+    image: neo4j:5.22.0-community
+    container_name: neo4j_db
+    environment:
+      NEO4J_AUTH: "${NEO4J_USER}/${NEO4J_PASSWORD}"
+    volumes:
+      - neo4j_data:/data
+    networks:
+      - app_network
+
+  cliente:
+    image: alpine
+    container_name: cliente
+    command: ["sh", "-c", "apk add curl && while true; do sleep 3600; done"]
+    networks:
+      - app_network
+
+volumes:
+  neo4j_data:
+
+networks:
+  app_network:
+    driver: bridge
